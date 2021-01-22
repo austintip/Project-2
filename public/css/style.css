@@ -3,6 +3,9 @@ nav ul li {
   display: inline-block;
   margin-right: .3em;
 }
+.navBar{
+  text-align: right;
+}
 
 h1 {
   color: chartreuse;

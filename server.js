@@ -2,8 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const layouts = require('express-ejs-layouts');
 const session = require('express-session');
+const axios = require('axios');
 const flash = require('connect-flash');
-const helmet = ('helmet');
+const helmet = require('helmet');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
 const app = express();
@@ -37,7 +38,16 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  res.render('index');
+  let dogsUrl = "https://api.thedogapi.com/v1/breeds/"
+  axios.get(dogsUrl)
+  .then(apiResponse => {
+    let dogBreeds = apiResponse.data;
+    dogBreeds.forEach(dog => {
+      console.log(dog.name)
+    });
+    res.render('index', { dogs: dogBreeds});
+    // res.render('index');
+  })
 });
 
 app.get('/profile', isLoggedIn, (req, res) => {

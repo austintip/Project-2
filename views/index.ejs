@@ -1,3 +1,11 @@
 <h2>Homepage</h2>
 
 <%= currentUser ? currentUser.name : 'There is no user' %>
+<br>
+<h3>Search for a dog breed</h3><input type="text" name="searchbar">
+<input type="submit" value="Search">
+<ul>
+<% dogs.forEach(dog => { %>
+<li> <%= dog.name %></li>
+<% }) %>
+</ul>
