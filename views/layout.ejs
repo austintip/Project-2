@@ -9,7 +9,13 @@
   <body>
     <header>
       (Name of Site TBD)
-      <nav class="navBar">
+      <nav>
+        <ul class="dogNavs">
+          <li><a href="/">Find Doggos</a></li>
+          <li><a href="/mydogs">My Dogs</a></li>
+        </ul>
+      </nav>
+      <nav  class="navBar">
         <ul>
           <% if (currentUser) { %>
             <li><a href="/auth/logout">Logout</a></li>

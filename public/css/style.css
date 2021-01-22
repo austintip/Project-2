@@ -3,9 +3,16 @@ nav ul li {
   display: inline-block;
   margin-right: .3em;
 }
-.navBar{
+/* .dogNavs {
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+} */
+/* .navBar {
   text-align: right;
-}
+  text-decoration: none;
+  display: inline-block;
+} */
 
 h1 {
   color: chartreuse;
