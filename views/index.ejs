@@ -1,11 +1,11 @@
 <h2 class="homepage">Homepage</h2>
 
-<%= currentUser ? currentUser.name : 'There is no user' %>
+<h2 class="welcome"> Welcome, <%= currentUser ? currentUser.name : 'Log in to add dogs to My Dogs' %>, select dogs to add to your My Dogs list, or click to learn more about the dogs!</h2>
 <br>
 <h3>Search for a dog breed</h3><input type="text" name="searchbar">
 <input type="submit" value="Search">
 <ul>
 <% dogs.forEach(dog => { %>
-<li> <%= dog.name %></li>
+<li class="dogHouse"> <%= dog.name %></li>
 <% }) %>
 </ul>
