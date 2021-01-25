@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('comments', {
+    await queryInterface.createTable('dogs', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -11,7 +11,19 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      content: {
+      bredfor: {
+        type: Sequelize.STRING
+      },
+      lifespan: {
+        type: Sequelize.STRING
+      },
+      temperament: {
+        type: Sequelize.STRING
+      },
+      temperament: {
+        type: Sequelize.STRING
+      },
+      url: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -25,6 +37,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('comments');
+    await queryInterface.dropTable('dogs');
   }
 };

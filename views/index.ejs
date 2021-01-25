@@ -14,6 +14,9 @@
 <% dogs.forEach(dog => { %>
 <li class="dogHouse"> <%= dog.name %></li>
 <a href="../info/<%= dog.id %>">Click to Learn More!</a>
+<form method="POST" action="/mydogs">
+    <button type="submit">Add to My Dogs</button>
+</form>
 <% }) %>
 </div>
 </ul>

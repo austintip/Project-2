@@ -50,9 +50,11 @@ app.get('/', (req, res) => {
   })
 });
 
-app.get('/mydogs', isLoggedIn, (req, res) => {
-  res.render('profile');
-});
+// app.get('/mydogs', isLoggedIn, (req, res) => {
+//   res.render('profile');
+// });
+
+app.use('/mydogs', isLoggedIn, require('./routes/mydogs'));
 
 app.use('/auth', require('./routes/auth'));
 
