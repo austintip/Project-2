@@ -12,10 +12,10 @@ router.get('/:id', (req, res) => {
     }})
     .then(apiResponse => {
         let dogs = apiResponse.data;
-        console.log(dogs);
-        console.log('🥶')
+        console.log(dogs[0]);
+        console.log('🥶');
         console.log(dogs[0].url);
-        res.render('dogs/info',{ dogs });
+        res.render('dogs/info',{ dog: dogs[0] });
     }).catch(err => {
         console.log(err)
     });
