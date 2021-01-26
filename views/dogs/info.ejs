@@ -1,7 +1,7 @@
 <img class="doggiePic" default-src='<%= dog.url %>' src='<%= dog.url %>' alt="Image of <%= dog.breeds[0].name %> found at <%= dog.url %>">
 <div class="descriptors">
     <h4>This is the <%= dog.breeds[0].name %></h4>
-    <h4>It is typically bred for: <%= dog.breeds[0].bred_for %></h4>
+    <h4>It is typically bred for: <%= dog.breeds[0].bred_for ? dog.breeds[0].bred_for : 'companionship' %></h4>
     <h4>It has a life span of around <%= dog.breeds[0].life_span %></h4>
     <h4>Some words to describe its temperament are: <%= dog.breeds[0].temperament %></h4>
 </div>

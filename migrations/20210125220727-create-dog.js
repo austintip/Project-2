@@ -20,8 +20,8 @@ module.exports = {
       temperament: {
         type: Sequelize.STRING
       },
-      temperament: {
-        type: Sequelize.STRING
+      userId: {
+        type: Sequelize.INTEGER
       },
       url: {
         type: Sequelize.STRING
