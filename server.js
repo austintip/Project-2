@@ -52,6 +52,14 @@ app.get('/', (req, res) => {
 // app.get('/mydogs', isLoggedIn, (req, res) => {
 //   res.render('profile');
 // });
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      "default-src": ["'self'", "https://*.TheDogapi.com"],
+      "img-src": ["'self'", "https://*.TheDogapi.com"]
+    },
+  })
+);
 
 app.use('/mydogs', isLoggedIn, require('./routes/mydogs'));
 
