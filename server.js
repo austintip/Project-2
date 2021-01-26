@@ -43,7 +43,6 @@ app.get('/', (req, res) => {
   .then(apiResponse => {
     let dogBreeds = apiResponse.data;
     dogBreeds.forEach(dog => {
-      console.log(dog.name)
     });
     res.render('index', { dogs: dogBreeds});
     // res.render('index');
