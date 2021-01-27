@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      models.dog.belongsTo(models.user)
     }
   };
   dog.init({
@@ -19,7 +20,8 @@ module.exports = (sequelize, DataTypes) => {
     lifespan: DataTypes.STRING,
     temperament: DataTypes.STRING,
     userId: DataTypes.INTEGER,
-    url: DataTypes.STRING
+    url: DataTypes.STRING,
+    dogId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'dog',

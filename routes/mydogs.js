@@ -2,10 +2,16 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 const db = require('../models');
+const methodOverride = require('method-override');
 
+router.use(methodOverride('_method'));
 
 router.get('/', (req, res) => {
-    db.dog.findAll()
+    db.dog.findAll({
+        where: {
+            userId: req.user.id
+        }
+    })
     .then(dog => {
         res.render('mydogs', {dog})
     }).catch(err => {
@@ -18,17 +24,32 @@ router.post('/', (req, res) => {
     db.dog.findOrCreate({
         where: {
             name: req.body.name,
-            bredfor: req.body.bredfor,
             lifespan: req.body.lifespan,
             temperament: req.body.temperament,
-            url: req.body.url
+            url: req.body.url,
+            userId: req.user.id,
+            dogId: req.body.dogId
         },
-        defaults: { bredfor: req.body.bredfor }
+        defaults: { bredfor: req.body.bredfor ? req.body.bredfor : 'companionship' }
     }).then(([dogs, wasCreated]) => {
         console.log('🤢', dogs)
         res.redirect('/mydogs')
     }).catch(err => {
         // console.log(err)
+    });
+});
+
+
+
+router.delete('/:id', (req, res) => {
+    db.dog.destroy({
+        where: {
+            id: req.params.id
+        }
+    }).then(destroyed => {
+        res.redirect('/mydogs')
+    }).catch(err => {
+        console.log(err);
     });
 });
 

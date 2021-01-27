@@ -4,5 +4,8 @@
 
 <% dog.forEach(dog => { %>
     <li class="dogHouse"><%= dog.name %></li> 
-    <a href="../info/<%= dog.id %>">Click to Learn More!</a>
+    <a href="../info/<%= dog.dogId %>">Click to Learn More!</a>
+    <form method="POST" action="/mydogs/<%= dog.id %>/?_method=DELETE">
+        <input type="submit" value="Remove from My Dogs">
+    </form>
     <% }) %>

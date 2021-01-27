@@ -31,16 +31,16 @@ Signup Page
 * Have a page that displays dog breeds from the dog API and allows user to add them to favorites, or learn more info
 * Have a working signup/login/logout feature
 * Access dog breed info from the dog API and display it on the Dog Info page with an image
-* Have a working comment feature
+* Have a working Remove dog from My Dogs button
 * Style it to look nice and purty
 
 **Sprint Plan**
 * Have a page that displays the breed list and includes favorite button by Sunday
 * Have working login/signup/logout feature by Monday
-* Add Dog Info page and include the info on the page and working comments by Tuesday
 
 
 **Stretch Goals**
 * Include a search feature based off of dog attributes
 * Add a questionnaire that matches users to specific dog breeds based on their answers
 * Add complexity with another API
+* Have a working comment feature

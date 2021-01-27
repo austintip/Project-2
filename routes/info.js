@@ -21,5 +21,20 @@ router.get('/:id', (req, res) => {
     });
 });
 
+router.post('/:id', (req, res) => {
+    let dogBreed = req.params.id;
+    let dogUrl = `https://api.TheDogAPI.com/v1/images/search?breed_id=${dogBreed}`
+    axios.get(dogUrl, { 
+        headers: {
+            'x-api-key': `${API_KEY}`
+    }})
+    .then(apiResponse => {
+        let dogs = apiResponse.data;
+        res.render('dogs/info',{ dog: dogs[0] });
+    }).catch(err => {
+        console.log(err)
+    });
+});
+
 
 module.exports = router;

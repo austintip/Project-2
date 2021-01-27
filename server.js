@@ -8,6 +8,7 @@ const helmet = require('helmet');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
 const app = express();
+const methodOverride = require('method-override');
 
 app.set('view engine', 'ejs');
 

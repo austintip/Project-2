@@ -12,7 +12,7 @@
 <ul>
 <div class="well">
 <% dogs.forEach(dog => { %>
-<li class="dogHouse"> <%= dog.name %></li>
+<li class="dogHouse"><%= dog.name %></li>
 <a href="../info/<%= dog.id %>">Click to Learn More!</a>
 <form method="POST" action="/mydogs">
     <input type='hidden' name='name' value='<%= dog.name %>'>
@@ -20,6 +20,7 @@
     <input type='hidden' name='lifespan' value='<%= dog.life_span %>'>
     <input type='hidden' name='temperament' value='<%= dog.temperament %>'>
     <input type='hidden' name='url' value='<%= dog.image.url %>'>
+    <input type='hidden' name='dogId' value='<%= dog.id %>'>
     <button type="submit">Add to My Dogs</button>
 </form>
 <% }) %>

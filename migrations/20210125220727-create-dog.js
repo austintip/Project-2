@@ -26,6 +26,9 @@ module.exports = {
       url: {
         type: Sequelize.STRING
       },
+      dogId: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
