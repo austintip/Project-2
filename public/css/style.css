@@ -1,6 +1,6 @@
 #myHeader {
   padding: 3px 13px;
-  background: rgba(206, 205, 205, 0.808);
+  background: rgba(146, 135, 135, 0.808);
   color: #f1f1f1;
   width: 100%;
   display: flex;
@@ -47,7 +47,7 @@ nav ul li {
   text-align: center;
   align-content: flex-end;
   justify-content: right;
-  margin-left: 30%;
+  margin-left: 50%;
 }
 
 .dogLove {
@@ -57,10 +57,11 @@ nav ul li {
   text-align: center;
 }
 body {
-  background-color: rgb(126, 126, 126);
+  background-color: rgb(170, 120, 56);
 }
 
 .doggiePic {
+  border: 1px solid black;
   display: block;
   max-width: 40%;
   max-height: 20%;
@@ -70,6 +71,9 @@ body {
 
 .homepage {
   color: white;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 3em;
 }
 
 .welcome {
@@ -77,11 +81,20 @@ body {
   background-color: rgb(207, 205, 205);
   color: black;
   text-align: center;
+  font-family: 'Hachi Maru Pop', cursive;
+}
+
+.searchBreedWords{
+  text-align: center;
 }
 
 .searchBar {
   display: flex;
   justify-content: center;
+}
+
+.searchBox{
+  margin: 0px 5px;
 }
 
 .contentHolder {
@@ -117,9 +130,37 @@ body {
   justify-content: center;
 }
 
+.addMyDog {
+  margin-left: 45%;
+  margin-right: 45%;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+}
+
+.removeMyDogs {
+  margin-left: 33.5%;
+  margin-right: 40%;
+  text-align: center;
+  border: 1px solid black;
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  font-family:monospace;
+}
+
 .descriptors {
   text-align: center;
-  color:rgb(148, 27, 51);
+  color:rgb(0, 0, 0);
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 

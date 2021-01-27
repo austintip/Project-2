@@ -1,17 +1,18 @@
-<img class="doggiePic" default-src='<%= dogs.url %>' src='<%= dogs.url %>' alt="Image of <%= dogs.breeds[0].name %> found at <%= dogs.url %>">
-<div class="descriptors">
-    <h4>This is the <%= dogs.breeds[0].name %></h4>
-    <h4>It is typically bred for: <%= dogs.breeds[0].bred_for ? dogs.breeds[0].bred_for : 'companionship' %></h4>
-    <h4>It has a life span of around <%= dogs.breeds[0].life_span %></h4>
-    <h4>Some words to describe its temperament are: <%= dogs.breeds[0].temperament %></h4>
+<div class="contentHolder">
+    <img class="doggiePic" default-src='<%= dogs.url %>' src='<%= dogs.url %>' alt="Image of <%= dogs.breeds[0].name %> found at <%= dogs.url %>">
+    <div class="descriptors">
+        <h4>This is the <%= dogs.breeds[0].name %></h4>
+        <h4>It is typically bred for: <%= dogs.breeds[0].bred_for ? dogs.breeds[0].bred_for : 'companionship' %></h4>
+        <h4>It has a life span of around <%= dogs.breeds[0].life_span %></h4>
+        <h4>Some words to describe its temperament are: <%= dogs.breeds[0].temperament %></h4>
+    </div>  
+    <form method="POST" action="/mydogs">
+        <input type='hidden' name='name' value='<%= dogs.breeds[0].name %>'>
+        <input type='hidden' name='bredfor' value='<%= dogs.breeds[0].bred_for %>'>
+        <input type='hidden' name='lifespan' value='<%= dogs.breeds[0].life_span %>'>
+        <input type='hidden' name='temperament' value='<%= dogs.breeds[0].temperament %>'>
+        <input type='hidden' name='url' value='<%= dogs.breeds[0].url %>'>
+        <input type='hidden' name='dogId' value='<%= dogs.breeds[0].id %>'>
+        <button class="addMyDog" type="submit">Add to My Dogs</button>
+    </form>
 </div>
-
-<form method="POST" action="/mydogs">
-    <input type='hidden' name='name' value='<%= dogs.breeds[0].name %>'>
-    <input type='hidden' name='bredfor' value='<%= dogs.breeds[0].bred_for %>'>
-    <input type='hidden' name='lifespan' value='<%= dogs.breeds[0].life_span %>'>
-    <input type='hidden' name='temperament' value='<%= dogs.breeds[0].temperament %>'>
-    <input type='hidden' name='url' value='<%= dogs.breeds[0].url %>'>
-    <input type='hidden' name='dogId' value='<%= dogs.breeds[0].id %>'>
-    <button type="submit">Add to My Dogs</button>
-</form>

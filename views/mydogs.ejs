@@ -1,11 +1,13 @@
 <h2>My Dogs</h2>
 
 <h3>Welcome to your My Dogs page, <%= currentUser ? currentUser.name : 'Hi'%>!</h3>
-
+<br>
+<div class="contentHolder">
 <% dog.forEach(dog => { %>
     <li class="dogHouse"><%= dog.name %></li> 
-    <a href="../info/<%= dog.dogId %>">Click to Learn More!</a>
+    <a href="../info/<%= dog.dogId %>" class="dogLinks">Click to Learn More!</a>
     <form method="POST" action="/mydogs/<%= dog.id %>/?_method=DELETE">
-        <input type="submit" value="Remove from My Dogs">
+        <input class ="removeMyDogs" type="submit" value="Remove from My Dogs">
     </form>
     <% }) %>
+</div>
