@@ -1,0 +1,9 @@
+sequelize model:create --name dog --attributes name:string,bredfor:string,lifespan:string,temperament:string,url:string
+
+
+<% dogs.forEach(dog => { %>
+<li class="dogHouse"><%= dog.name %></li> 
+<% }) %>
+
+
+app.use('/mydogs', isLoggedIn, require('./routes/mydogs'));

@@ -5,12 +5,17 @@ const db = require('../models');
 
 
 router.get('/', (req, res) => {
-    res.render('mydogs')
+    db.dog.findAll()
+    .then(dog => {
+        res.render('mydogs', {dog})
+    }).catch(err => {
+        console.log(err);
+    })
 });
 
 router.post('/', (req, res) => {
     console.log(req.body)
-    let dogs = db.dog.findOrCreate({
+    db.dog.findOrCreate({
         where: {
             name: req.body.name,
             bredfor: req.body.bredfor,
@@ -21,7 +26,7 @@ router.post('/', (req, res) => {
         defaults: { bredfor: req.body.bredfor }
     }).then(([dogs, wasCreated]) => {
         console.log('🤢', dogs)
-        res.redirect('/mydogs', { dogs })
+        res.redirect('/mydogs')
     }).catch(err => {
         // console.log(err)
     });

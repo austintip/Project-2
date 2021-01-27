@@ -1,7 +1,8 @@
 <h2>My Dogs</h2>
 
-<h3>Welcome to your My Dogs page, <%= currentUser.name %>!</h3>
+<h3>Welcome to your My Dogs page, <%= currentUser ? currentUser.name : 'Hi'%>!</h3>
 
-<% dogs.forEach(dog => { %>
-<li class="dogHouse"><%= dog.name %></li> 
-<% }) %>
+<% dog.forEach(dog => { %>
+    <li class="dogHouse"><%= dog.name %></li> 
+    <a href="../info/<%= dog.id %>">Click to Learn More!</a>
+    <% }) %>
