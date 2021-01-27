@@ -1,3 +1,29 @@
+#myHeader {
+  padding: 3px 13px;
+  background: rgba(206, 205, 205, 0.808);
+  color: #f1f1f1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: flex-end;
+  /* align-items: center; */
+}
+
+.content {
+  padding: 13px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
 .pageName {
   font-size: 30px;
   font-family:'Courier New', Courier, monospace;
@@ -13,13 +39,15 @@ nav ul li {
 .dogNavs {
   text-align: left;
   padding: 0px;
-  margin-right: 60%;
-  margin-left: 5%;
+  align-content: space-between;
+  align-items:flex-end;
 }
 
 .navBar {
   text-align: center;
-  margin-left: 80%;
+  align-content: flex-end;
+  justify-content: right;
+  margin-left: 30%;
 }
 
 .dogLove {
@@ -29,7 +57,7 @@ nav ul li {
   text-align: center;
 }
 body {
-  background-color: rgb(134, 170, 218);
+  background-color: rgb(126, 126, 126);
 }
 
 .doggiePic {
@@ -45,15 +73,48 @@ body {
 }
 
 .welcome {
-  color:thistle;
+  border: 1px dotted black;
+  background-color: rgb(207, 205, 205);
+  color: black;
   text-align: center;
 }
 
+.searchBar {
+  display: flex;
+  justify-content: center;
+}
+
+.contentHolder {
+  border: 2px solid black;
+  background-color:rgb(247, 247, 247);
+  margin: 0% 10% 10% 5%;
+  padding: 2% 7% 2% 7%;
+}
+
 .dogHouse {
+  font-size:x-large;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
   border: 1px solid black;
+  background-color: rgb(255, 255, 255);
   padding: 12px;
-  margin: 3% 7% 3% 3%;
-  color:rgb(248, 216, 252);
+  margin: 6% 25% 0% 25%;
+  color:rgb(47, 6, 53);
+  list-style-type: none;
+  display: flex;
+  justify-content: center;;
+}
+
+.dogLinks {
+  margin-left: 40%;
+  margin-right: 40%;
+  text-align: center;
+  border: 1px solid black;
+  background-color: gray;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .descriptors {

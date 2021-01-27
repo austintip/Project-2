@@ -51,9 +51,6 @@ app.get('/', (req, res) => {
   })
 });
 
-// app.get('/mydogs', isLoggedIn, (req, res) => {
-//   res.render('profile');
-// });
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
@@ -85,6 +82,7 @@ app.use('/mydogs', isLoggedIn, require('./routes/mydogs'));
 app.use('/auth', require('./routes/auth'));
 
 app.use('/info', require('./routes/info'));
+
 
 
 var server = app.listen(process.env.PORT || 3000, ()=> console.log(`🎧You're listening to the smooth sounds of port ${process.env.PORT || 3000}🎧`));

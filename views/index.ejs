@@ -2,8 +2,9 @@
 
 <h2 class="welcome"> Welcome, <%= currentUser ? currentUser.name : 'Log in to' %> select dogs to add to your My Dogs list, or click to learn more about the dogs!</h2>
 <br>
+<div class="contentHolder">
 <h3>Search for a dog breed</h3>
-<form method="GET" action="/search">
+<form class="searchBar" method="GET" action="/search">
     <label for="dogName">Search dog breed</label>
     <!-- <input id="dogName" type="text" name="breed"> -->
     <input type="search" name="name">
@@ -13,7 +14,8 @@
 <div class="well">
 <% dogs.forEach(dog => { %>
 <li class="dogHouse"><%= dog.name %></li>
-<a href="../info/<%= dog.id %>">Click to Learn More!</a>
+<a href="../info/<%= dog.id %>" class='dogLinks'>Click to Learn More!</a>
 <% }) %>
 </div>
 </ul>
+</div>

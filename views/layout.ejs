@@ -6,9 +6,10 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src 'self';font-src 'self'; img-src 'self' data: https:; style-src 'self' ; script-src 'self'">
     <title>DogSpot</title>
     <link rel="stylesheet" href="/css/style.css">
+    <script src="./js/main.js" defer></script>
   </head>
   <body>
-    <header>
+    <header id="myHeader">
       <h3 class="pageName">DogSpot</h3>
       <nav>
         <ul class="dogNavs">
@@ -27,8 +28,10 @@
         </ul>
       </nav>
     </header>
-    <h1 class="dogLove">Who doesn't love dogs? <br>Find your perfect dog today!</h1>
+    <!-- <h1 class="dogLove">Who doesn't love dogs? <br>Find your perfect dog today!</h1> -->
     <%- include ('./partials/alerts.ejs') %>
-    <%- body %>
+    <div class="content">
+      <%- body %>
+    </div>  
   </body>
 </html>
