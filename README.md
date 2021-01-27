@@ -1,6 +1,6 @@
 # Dog Finding App - Spot (potential name?)
 **Description**
-A full stack app that allows users to search through a list of dog breeds and select breeds to save as favorites. Users may click to learn more info on a specific breed and can add comments to a breed on the info page. 
+A full stack app that allows users to search through a list of dog breeds and select breeds to save as favorites. Users may click to learn more info on a specific breed and can remove them from the favorites as well. 
 
 **List of Tech** 
 * Axios

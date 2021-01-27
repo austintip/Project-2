@@ -8,6 +8,7 @@ const helmet = require('helmet');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
 const app = express();
+const API_KEY= process.env.API_KEY
 const methodOverride = require('method-override');
 
 app.set('view engine', 'ejs');
@@ -42,10 +43,10 @@ app.get('/', (req, res) => {
   let dogsUrl = "https://api.thedogapi.com/v1/breeds/"
   axios.get(dogsUrl)
   .then(apiResponse => {
-    let dogBreeds = apiResponse.data;
-    dogBreeds.forEach(dog => {
+    let dogs = apiResponse.data;
+    dogs.forEach(dog => {
     });
-    res.render('index', { dogs: dogBreeds});
+    res.render('index', { dogs: dogs});
     // res.render('index');
   })
 });
@@ -61,6 +62,23 @@ app.use(
     },
   })
 );
+
+app.get('/search', (req, res) => {
+  // let dogBreed = req.params.id;
+  let dogUrl = `https://api.thedogapi.com/v1/breeds/search?q=${req.query.name}`
+  axios.get(dogUrl, { 
+      headers: {
+          'x-api-key': `${API_KEY}`
+  }})
+  .then(apiResponse => {
+      let dogs = apiResponse.data;
+      console.log(dogs);
+      res.render('index', { dogs: dogs });
+  }).catch(err => {
+      console.log(err)
+      res.send(err)
+  });
+});
 
 app.use('/mydogs', isLoggedIn, require('./routes/mydogs'));
 
