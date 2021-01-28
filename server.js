@@ -25,12 +25,11 @@ app.use(session({
   saveUninitialized: true
 }));
 
-// Init passport config MUST HAPPEN AFTER SESSION CONFIG
+
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-// write custom middleware to access the user on every response
 app.use((req, res, next) => {
   let alerts = req.flash();
   console.log(alerts);
@@ -47,7 +46,6 @@ app.get('/', (req, res) => {
     dogs.forEach(dog => {
     });
     res.render('index', { dogs: dogs});
-    // res.render('index');
   })
 });
 
@@ -61,7 +59,6 @@ app.use(
 );
 
 app.get('/search', (req, res) => {
-  // let dogBreed = req.params.id;
   let dogUrl = `https://api.thedogapi.com/v1/breeds/search?q=${req.query.name}`
   axios.get(dogUrl, { 
       headers: {

@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const axios = require('axios');
 const db = require('../models');
 const methodOverride = require('method-override');
 
@@ -35,7 +34,7 @@ router.post('/', (req, res) => {
         console.log('🤢', dogs)
         res.redirect('/mydogs')
     }).catch(err => {
-        // console.log(err)
+        console.log(err)
     });
 });
 

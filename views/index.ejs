@@ -1,21 +1,21 @@
 <h2 class="homepage"><em>Spot The Perfect Dogs For You!</em></h2>
 
-<h2 class="welcome"> Welcome to DogSpot, <%= currentUser ? currentUser.name +'!' : 'Log in to' %> select dogs to add to your My Dogs list, or click to learn more about the dogs!</h2>
+<h2 class="welcome"> Welcome to DogSpot<%= currentUser ?', ' + currentUser.name +'! ' : '! Log in to add dogs to your My Dogs list. ' %>Click to learn more about the dogs!</h2>
+
 <br>
+
 <div class="contentHolder">
-<h3 class="searchBreedWords">Search for a dog breed here:</h3>
-<form class="searchBar" method="GET" action="/search">
-    <!-- <label for="dogName">Search dog breed</label> -->
-    <!-- <input id="dogName" type="text" name="breed"> -->
-    <input class="searchBox" type="search" name="name">
-    <input type="submit">
-</form>
-<ul>
-<div class="well">
-<% dogs.forEach(dog => { %>
-<li class="dogHouse"><%= dog.name %></li>
-<a href="../info/<%= dog.id %>" class='dogLinks'>Click to Learn More!</a>
-<% }) %>
-</div>
-</ul>
+    <h3 class="searchBreedWords">Search for a dog breed here:</h3>
+    <form class="searchBar" method="GET" action="/search">
+        <input class="searchBox" type="search" name="name">
+        <input type="submit">
+    </form>
+    <ul>
+        <div class="well">
+            <% dogs.forEach(dog => { %>
+            <li class="dogHouse"><%= dog.name %></li>
+            <a href="../info/<%= dog.id %>" class='dogLinks'>Click to Learn More!</a>
+            <% }) %>
+        </div>
+    </ul>
 </div>
