@@ -6,7 +6,7 @@
         <h4>It has a life span of around <%= dogs.breeds[0].life_span %></h4>
         <h4>Some words to describe its temperament are: <%= dogs.breeds[0].temperament %></h4>
     </div>  
-    <form method="POST" action="/mydogs">
+    <form class="addToMyDogs" method="POST" action="/mydogs">
         <input type='hidden' name='name' value='<%= dogs.breeds[0].name %>'>
         <input type='hidden' name='bredfor' value='<%= dogs.breeds[0].bred_for %>'>
         <input type='hidden' name='lifespan' value='<%= dogs.breeds[0].life_span %>'>
