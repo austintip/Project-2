@@ -32,8 +32,13 @@ router.post('/', (req, res) => {
         defaults: { bredfor: req.body.bredfor ? req.body.bredfor : 'Companionship', temperament: req.body.temperament ? req.body.temperament : 'fun-loving, silly, loyal' }
     }).then(([dogs, wasCreated]) => {
         console.log('🤢', dogs)
-        req.flash('success', `Added ${req.body.name} to My Dogs!`)
-        res.redirect('/mydogs')
+        if (wasCreated) {
+            req.flash('success', `Added ${req.body.name} to My Dogs!`)
+            res.redirect('/mydogs')
+        } else {
+            req.flash('error', `${req.body.name} is already on My Dogs list!`)
+            res.redirect('/mydogs')
+        }
     }).catch(err => {
         console.log(err)
     });
