@@ -32,6 +32,7 @@ router.post('/', (req, res) => {
         defaults: { bredfor: req.body.bredfor ? req.body.bredfor : 'Companionship', temperament: req.body.temperament ? req.body.temperament : 'fun-loving, silly, loyal' }
     }).then(([dogs, wasCreated]) => {
         console.log('🤢', dogs)
+        req.flash('success', 'Added to My Dogs!')
         res.redirect('/mydogs')
     }).catch(err => {
         console.log(err)
@@ -46,6 +47,7 @@ router.delete('/:id', (req, res) => {
             id: req.params.id
         }
     }).then(destroyed => {
+        req.flash('success', 'You let the dog out!')
         res.redirect('/mydogs')
     }).catch(err => {
         console.log(err);
