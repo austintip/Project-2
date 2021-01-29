@@ -32,7 +32,7 @@ router.post('/', (req, res) => {
         defaults: { bredfor: req.body.bredfor ? req.body.bredfor : 'Companionship', temperament: req.body.temperament ? req.body.temperament : 'fun-loving, silly, loyal' }
     }).then(([dogs, wasCreated]) => {
         console.log('🤢', dogs)
-        req.flash('success', 'Added to My Dogs!')
+        req.flash('success', `Added ${req.body.name} to My Dogs!`)
         res.redirect('/mydogs')
     }).catch(err => {
         console.log(err)
