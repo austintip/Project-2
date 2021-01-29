@@ -5,13 +5,19 @@
 <br>
 
 <div class="contentHolder">
-    <div class="well">
-    <% dog.forEach(dog => { %>
-        <li class="dogHouse"><%= dog.name %></li> 
-        <a href="../info/<%= dog.dogId %>" class="dogLinks">Click to Learn More!</a>
-        <form method="POST" action="/mydogs/<%= dog.id %>/?_method=DELETE">
-            <input class ="removeMyDogs" type="submit" value="Remove from My Dogs">
-        </form>
-        <% }) %>
+    <div class="innerContainer">
+        <div class="well">
+            <% if (dog.length) { %>
+                <% dog.forEach(dog => { %>
+                    <li class="dogHouse"><%= dog.name %></li> 
+                    <a href="../info/<%= dog.dogId %>" class="dogLinks">Click to Learn More!</a>
+                    <form method="POST" action="/mydogs/<%= dog.id %>/?_method=DELETE">
+                        <input class ="removeMyDogs" type="submit" value="Remove from My Dogs">
+                    </form>
+                    <% }) %>
+            <% } else { %>
+                <h2 class="noDogs">Select Dogs from the "Find Doggos" page to add them to your "My Dogs" page!</h2>
+            <% } %>
+        </div>
     </div>
 </div>

@@ -4,7 +4,7 @@
         <h4>This is the <%= dogs.breeds[0].name %></h4>
         <h4>It is typically bred for: <%= dogs.breeds[0].bred_for ? dogs.breeds[0].bred_for : 'Companionship' %></h4>
         <h4>It has a life span of around <%= dogs.breeds[0].life_span %></h4>
-        <h4>Some words to describe its temperament are: <%= dogs.breeds[0].temperament %></h4>
+        <h4>Some words to describe its temperament are: <%= dogs.breeds[0].temperament ? dogs.breeds[0].temperament : 'fun-loving, silly, loyal' %></h4>
     </div>  
     <form class="addToMyDogs" method="POST" action="/mydogs">
         <input type='hidden' name='name' value='<%= dogs.breeds[0].name %>'>

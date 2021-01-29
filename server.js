@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      "default-src": ["'self'", "https://*.TheDogapi.com"],
+      "default-src": ["'self'", "*"],
       "img-src": ["'self'", "https://*.TheDogapi.com"]
     },
   })
