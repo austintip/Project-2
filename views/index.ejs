@@ -5,17 +5,19 @@
 <br>
 
 <div class="contentHolder">
-    <h3 class="searchBreedWords">Search for a dog breed here:</h3>
-    <form class="searchBar" method="GET" action="/search">
-        <input class="searchBox" type="search" name="name">
-        <input class="fetchBtn" type="submit" value="Fetch!">
-    </form>
-    <ul>
-        <div class="well">
-            <% dogs.forEach(dog => { %>
-            <li class="dogHouse"><%= dog.name %></li>
-            <a href="../info/<%= dog.id %>" class='dogLinks'>Click to Learn More!</a>
-            <% }) %>
-        </div>
-    </ul>
+    <div class="innerContainer">
+        <h3 class="searchBreedWords">Search for a dog breed here:</h3>
+        <form class="searchBar" method="GET" action="/search">
+            <input class="searchBox" type="search" name="name">
+            <input class="fetchBtn" type="submit" value="Fetch!">
+        </form>
+        <ul>
+            <div class="well">
+                <% dogs.forEach(dog => { %>
+                <li class="dogHouse"><%= dog.name %></li>
+                <a href="../info/<%= dog.id %>" class='dogLinks'>Click to Learn More!</a>
+                <% }) %>
+            </div>
+        </ul>
+    </div>
 </div>

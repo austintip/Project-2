@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
             userId: req.user.id,
             dogId: req.body.dogId
         },
-        defaults: { bredfor: req.body.bredfor ? req.body.bredfor : 'companionship' }
+        defaults: { bredfor: req.body.bredfor ? req.body.bredfor : 'Companionship' }
     }).then(([dogs, wasCreated]) => {
         console.log('🤢', dogs)
         res.redirect('/mydogs')
