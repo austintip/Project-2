@@ -454,11 +454,12 @@ body {
 
   .myDogsPage{
     font-family: 'Hachi Maru Pop', cursive;
+    font-size: large;
   }
 
 
   .noDogs{
-    font-size:1em;
+    font-size:35px;
     font-family:'Potta One', cursive;
     text-align: center;
     border: 1px solid rgb(0, 0, 0);
