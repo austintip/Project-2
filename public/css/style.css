@@ -459,11 +459,12 @@ body {
 
 
   .noDogs{
-    font-size:35px;
+    font-size:20px;
     font-family:'Potta One', cursive;
     text-align: center;
     border: 1px solid rgb(0, 0, 0);
     color: rgb(245, 229, 185);
+    background-color: rgba(255, 255, 255, 0);
     padding: 12px;
     margin: 0% 0% 5% 0%;
     width: 150px;
