@@ -483,4 +483,11 @@ body {
   .searchBar {
     border: none;
   }
+
+  .well {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
