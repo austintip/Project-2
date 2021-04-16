@@ -328,3 +328,118 @@ body {
   display: flex;
   align-items: flex-end;
 }
+
+@media only screen and (max-width: 720px) {
+  body {
+    background-color:bisque;
+  }
+  #myHeader {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+    align-items: center;
+  }
+  .pageName {
+    margin-right: 1em;
+  }
+  .dogNavs {
+    font-size:small;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* margin: 2px; */
+  }
+
+  .navBar {
+    display: flex;
+    margin: 0 auto;
+    /* align-items: center; */
+    /* justify-content: left; */
+    /* flex-direction: row; */
+  }
+
+  .dogNavBtns {
+    margin-bottom: 7px;
+  }
+
+  .navBarLog {
+    margin-bottom: 7px;
+  }
+
+  .authHolder {
+    border: 3px solid black;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    padding: 15px;
+    margin-top: 4em;
+    background-color: rgb(235, 197, 141);
+    font-weight: bold;
+    box-shadow: 4px 7px 7px 2px #4d4747;
+  }
+
+  .authLabel {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  .auth {
+    margin-bottom: 10px;
+    border: 2px solid black;
+  }
+
+  .submit {
+    width: 100px;
+    text-align: center;
+    margin: auto:
+  }
+
+  .contentHolder {
+    min-width: 300px;
+    max-width: 600px;
+    margin-top: 1em;
+    border-radius: 8%;
+  }
+
+  .doggiePic {
+    max-height: 300px;
+    max-width: 300px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 10%;
+  }
+
+  .descriptors {
+    height: auto;
+    font-size: medium;
+    margin-bottom: 1em;
+    border-radius: 10%;
+    margin: 1em;
+  }
+
+  .innerContainer {
+    /* width: 300px; */
+    min-width: 200px;
+    width: 250px;
+    border-radius: 5%;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: auto;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .dogHouse {
+    min-width: 50px;
+    border-radius: 5%;
+    width: 200px;
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: 1em;
+  }
+}

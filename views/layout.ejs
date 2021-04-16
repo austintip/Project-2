@@ -15,17 +15,17 @@
       <h3 class="pageName">DogSpot</h3>
       <nav>
         <ul class="dogNavs">
-          <li><a href="/">Find Doggos</a></li>
-          <li><a href="/mydogs">My Dogs</a></li>
+          <li class="dogNavBtns"><a href="/">Find Doggos</a></li>
+          <li class="dogNavBtns"><a href="/mydogs">My Dogs</a></li>
         </ul>
       </nav>
       <nav  class="navBar">
         <ul>
           <% if (currentUser) { %>
-            <li><a href="/auth/logout">Logout</a></li>
+            <li class="navBarLog"><a href="/auth/logout">Logout</a></li>
           <% } else { %>
-            <li><a href="/auth/signup">Signup</a></li>
-            <li><a href="/auth/login">Login</a></li>
+            <li class="navBarLog"><a href="/auth/signup">Signup</a></li>
+            <li class="navBarLog"><a href="/auth/login">Login</a></li>
           <% } %>
         </ul>
       </nav>
