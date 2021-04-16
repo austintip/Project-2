@@ -474,4 +474,8 @@ body {
     box-shadow: 6px 9px 9px 2px #272626;
     -webkit-text-stroke: 1px black;
   }
+
+  .alert {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
 }
