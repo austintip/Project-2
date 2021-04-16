@@ -463,9 +463,8 @@ body {
     text-align: center;
     border: 1px solid rgb(0, 0, 0);
     color: rgb(245, 229, 185);
-    background-color: rgb(255, 255, 255);
     padding: 12px;
-    margin: 0% 0% 0% 0%;
+    margin: 0% 0% 2% 0%;
     width: 150px;
     list-style-type: none;
     display: flex;
@@ -477,5 +476,9 @@ body {
 
   .alert {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .searchBar {
+    border: none;
   }
 }
